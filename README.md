@@ -73,6 +73,92 @@ ví dụ:
 
 Ví dụ : nếu một trang web bán hàng muốn kinh doanh một loại hàng như t-shirt, hat, thì một trong những URL của website đó nên là https://shop.banhangvjppro.hehe/hat/ Trong đó, /hat chính là subdirectory, còn shop. là subdomain (tên miền phụ).
 
+-  URL Parameters (còn được gọi là "chuỗi truy vấn" hay thuật ngữ Tiếng Anh là "query string") là các phần tử được thêm vào URL giúp phân loại, sắp xếp theo dõi thông tin trên trang web của mình.
+
+Để xác định một URL Parameter, chúng ta xem phần URL đứng sau dấu chấm hỏi (?). Các URL Parameters được tạo bằng một khóa và một giá trị  {key=value}, được phân tách bằng dấu bằng (=). Nhiều tham số sau đó được phân tách bằng dấu và (&).
+
+![Screenshot 2023-02-21 220045](https://user-images.githubusercontent.com/125167136/220380724-dc070fa8-9fe9-4eca-8c6e-e4ca055de5d7.png)
+
+Mục đích sử dụng URL parameter phổ biến bao gồm:
+
+    + Phân loại trang trong một gallery
+
+    + Phân loại trang sản phẩm trên một trang thương mại điện tử (e-commerce)
+
+    +  Kết quả tìm kiếm trên bộ máy tìm kiếm nội bộ của website
+
+    +  UTM Tracking để theo dõi các chiến dịch: Campaign Name, Campaign Source, Campaign Medium
+    
+Cách hoạt động của tham số URL Parameter, có hai loại tham số URL Parameter:
+
+URL Parameter sửa đổi nội dung (chủ động): tham số sẽ sửa đổi nội dung hiển thị trên trang
+
+Ví dụ: đưa người dùng trực tiếp đến một sản phẩm cụ thể có tên là 'xyz'
+
+https://by.com.vn?productid=xyz
+
+URL Parameter tracking (thụ động) để theo dõi nâng cao: thông số sẽ theo dõi các thông tin như: nguồn truy cập, tên chiến dịch hoặc tên nhóm quảng cáo nào, v.v. - nhưng sẽ không thay đổi nội dung trên trang. 
+
+Ví dụ: để theo dõi lưu lượng truy cập từ bản tin của bạn 
+
+https://by.com.vn/?utm_source=newsletter&utm_medium=email
+
+- Anchor link là một đường liên kết giúp chuyển tiếp nội dung trên trang. Đó là một ID duy nhất (mã định danh) được gắn vào nội dung hoặc phần cụ thể nào đó.
+
+Về bản chất, anchor link được xem xét từ hai khía cạnh khác nhau. Một anchor link riêng lẻ có thể coi là điểm đánh dấu giúp bạn tiếp cận thông tin mà không cần tìm kiếm trên toàn bộ trang.
+
+Mặt khác, tập hợp các anchor link có thể được xem như một bảng nội dung tương tác, giống như phần mục lục của một cuốn sách. Điều khác biệt là bạn có thể nhấp vào phần được liệt kê và đến đó một cách nhanh chóng.
+
+Đối với SEO, anchor link đóng một vai trò rất quan trọng. Các đường liên kết anchor này giúp xác định phần quan trọng của nội dung bài viết, xác định cấu trúc trang và cải thiện dữ liệu phân tích SEO trên trang. Google luôn rất thông minh, nó sẽ tiếp nhận thông tin cụ thể hơn bằng cách kiểm tra cấu trúc anchor link ở website của bạn.
+
+        ( SEO là viết tắt của Search Engine Optimization (tối ưu hóa công cụ tìm kiếm) và là một kỹ thuật đặc biệt trong Internet Marketing. Mục đích giúp website đạt            được thứ hạng cao trên các trang tìm kiếm, tiêu biểu là Google. )
+        
+Một anchor link bao gồm 2 phần:
+
+    + Phần đầu tiên là anchor – một mã định danh duy nhất mà bạn có thể gắn vào các phần của trang. Trong CSS, ký tự anchor được thể hiện dưới dạng id = “unique-id” và có thể được sử dụng làm tham chiếu đến các kí tự (elements) trong CSS hoặc JavaScript.
+    
+    + Phần thứ hai là một đường liên kết. Sự khác biệt ở đây là URL này bao gồm hash symbol – một chuỗi các kí tự liên tiếp nhau được đặt sau dấu thăng (thường được gọi là hashtag) và đường liên kết độc nhất – #unique-id.
+    
+Cách tạo anchor link trong WordPress
+
+  + Đầu tiên, chúng ta sẽ tạo một liên kết anchor trên trang.
+  
+  + Tiếp theo, chuyển sang chế độ văn bản của TinyMCE.
+
+  + Sau đó điều hướng đến phần nội dung mà bạn muốn gắn liên kết anchor.
+
+  + Cuối cùng thêm ID có tên liên kết độc nhất (ví dụ: id = ”anchor-name”). Có thể áp dụng một ID cho bất kỳ kí tự nào trong bố cục.
+
+Bước tiếp theo là liên kết đến anchor mà bạn đã tạo ra: 
+
+  + Chọn phần văn bản cần gắn link và nhấp vào “Chọn/Chỉnh sửa liên kết” (“Select/Edit link”).
+
+  + Bạn sẽ thấy một cửa sổ để chỉnh sửa các thông số liên kết.
+
+  + Thêm hash symbol cùng tên liên kết bạn đã tạo trước đó.
+
+  + Nhấn lưu các thay đổi.
+
+Cách tạo anchor link ở Visual Composer
+
+  + Chọn ký tự bạn muốn “nhảy” đến (còn gọi là điểm đến);
+
+  + Mở cửa sổ chỉnh sửa ký tự;
+
+  + Thêm một ID độc nhất “Element ID” (không sử dụng dấu cách).    
+
+Sau khi ID đã được thêm vào, tiếp theo bạn sẽ gắn anchor link:
+
+  + Mở cửa sổ chỉnh sửa ký tự có chứa anchor link sẽ được thêm vào;
+
+  + Nhấp vào “Chọn URL”;
+
+  + Thêm “Element ID” độc nhất;
+  
+Lưu ý rằng phải đảm bảo chỉ sử dụng các chữ cái và số không có khoảng cách.
+
+Sau đó Chọn “tùy chỉnh” tại URL là xong.
+
 *Ngoài ra còn 2 thành thành khác trong URL*
 
 - Thông tin người dùng : URL cũng có thể chứa tên người dùng và mật khẩu của trang web bạn đang truy cập. Ngày nay, bạn có thể ít bắt gặp cấu trúc URL này. VD : //username:password@www.example.com
